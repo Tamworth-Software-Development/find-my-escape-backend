@@ -20,11 +20,9 @@ public class FavouriteLocation {
     @Column
     private String locationName;
 
-    @Column
     @ManyToOne(fetch=FetchType.LAZY)
     @JoinTable(
-            name= "UserFavouriteLocation",
-            joinColumns = @JoinColumn(name = "locationId")
+            name= "UserFavouriteLocation"
     )
     private User FavLocationUser;
 }
