@@ -27,7 +27,6 @@ public class User {
     @Column
     private String current_Search;
 
-    @Column
     @OneToMany(mappedBy = "FavLocationUser")
     @JoinTable(
             name= "UserFavouriteLocation",
@@ -37,10 +36,9 @@ public class User {
     )
     private Set<FavouriteLocation> favouriteLocations = new HashSet<>();
 
-    @Column
     @OneToMany(mappedBy = "FavActivityUser")
     @JoinTable(
-            name= "UserFavouriteLocation",
+            name= "UserFavouriteActivity",
             joinColumns = @JoinColumn(name = "userId"),
             inverseJoinColumns = @JoinColumn(name = "activityId"),
             uniqueConstraints = @UniqueConstraint(columnNames = {"userId", "activityId"})
