@@ -1,7 +1,7 @@
 package com.tamworth.find_my_escape_backend.model;
 
-public class Sport extends Activity{
-    private String leisure;
+public class Museum extends Activity{
+    private String fee;
 
     private String website;
 
