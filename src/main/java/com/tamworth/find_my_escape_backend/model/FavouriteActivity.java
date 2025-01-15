@@ -24,8 +24,7 @@ public class FavouriteActivity {
     @Column
     @ManyToOne(fetch=FetchType.LAZY)
     @JoinTable(
-            name= "UserFavouriteActivity",
-            joinColumns = @JoinColumn(name = "activityId")
+            name= "UserFavouriteActivity"
     )
     private User FavActivityUser;
 
