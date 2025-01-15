@@ -22,7 +22,10 @@ public class FavouriteLocation {
 
     @ManyToOne(fetch=FetchType.LAZY)
     @JoinTable(
-            name= "UserFavouriteLocation"
+            name= "UserFavouriteLocation",
+            joinColumns = @JoinColumn(name = "locationId"),
+            inverseJoinColumns = @JoinColumn(name = "userId"),
+            uniqueConstraints = @UniqueConstraint(columnNames = {"locationId", "userId"})
     )
     private User favLocationUser;
 }

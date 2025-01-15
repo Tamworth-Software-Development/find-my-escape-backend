@@ -11,7 +11,7 @@ import java.util.Set;
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
-@Table(name = "user")
+@Table(name = "USER")
 public class User {
     @Id
     @NonNull
@@ -27,7 +27,7 @@ public class User {
     @Column
     private String current_Search;
 
-    @OneToMany(mappedBy = "favLocationUser")
+    @OneToMany
     @JoinTable(
             name= "UserFavouriteLocation",
             joinColumns = @JoinColumn(name = "userId"),
@@ -36,7 +36,7 @@ public class User {
     )
     private Set<FavouriteLocation> favouriteLocations = new HashSet<>();
 
-    @OneToMany(mappedBy = "favActivityUser")
+    @OneToMany
     @JoinTable(
             name= "UserFavouriteActivity",
             joinColumns = @JoinColumn(name = "userId"),

@@ -21,10 +21,12 @@ public class FavouriteActivity {
     @Column
     private String activityType;
 
-    @Column
     @ManyToOne(fetch=FetchType.LAZY)
     @JoinTable(
-            name= "UserFavouriteActivity"
+            name= "UserFavouriteActivity",
+            joinColumns = @JoinColumn(name = "activityId"),
+            inverseJoinColumns = @JoinColumn(name = "userId"),
+            uniqueConstraints = @UniqueConstraint(columnNames = {"activityId", "userId"})
     )
     private User favActivityUser;
 
