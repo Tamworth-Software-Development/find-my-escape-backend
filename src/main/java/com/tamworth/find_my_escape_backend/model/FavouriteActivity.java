@@ -26,6 +26,6 @@ public class FavouriteActivity {
     @JoinTable(
             name= "UserFavouriteActivity"
     )
-    private User FavActivityUser;
+    private User favActivityUser;
 
 }

@@ -27,7 +27,7 @@ public class User {
     @Column
     private String current_Search;
 
-    @OneToMany(mappedBy = "FavLocationUser")
+    @OneToMany(mappedBy = "favLocationUser")
     @JoinTable(
             name= "UserFavouriteLocation",
             joinColumns = @JoinColumn(name = "userId"),
@@ -36,7 +36,7 @@ public class User {
     )
     private Set<FavouriteLocation> favouriteLocations = new HashSet<>();
 
-    @OneToMany(mappedBy = "FavActivityUser")
+    @OneToMany(mappedBy = "favActivityUser")
     @JoinTable(
             name= "UserFavouriteActivity",
             joinColumns = @JoinColumn(name = "userId"),
