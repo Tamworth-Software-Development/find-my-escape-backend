@@ -7,8 +7,4 @@ import java.util.List;
 
 public interface LocationService {
     Location findLocationInformation(String locationName);
-
-    List<Activity> findActivitiesAtLocation(String locationId, String activityType); //activity type default to all types
-
-    Activity findActivityById(String activityId);
 }
