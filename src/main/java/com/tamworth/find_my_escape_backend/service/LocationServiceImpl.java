@@ -10,14 +10,4 @@ public class LocationServiceImpl implements LocationService {
     public Location findLocationInformation(String locationName) {
         return null;
     }
-
-    @Override
-    public List<Activity> findActivitiesAtLocation(String locationId, String activityType) {
-        return List.of(); // ActivityType defaults to search for all activity types.
-    }
-
-    @Override
-    public Activity findActivityById(String activityId) {
-        return null;
-    }
 }
